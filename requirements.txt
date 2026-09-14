@@ -1,0 +1,14 @@
+# --- Core (always required; pure-Python / offline-friendly) ---
+numpy
+scikit-learn          # powers the offline TF-IDF embedding fallback
+pypdf                 # PDF parsing
+python-docx            # DOCX parsing
+streamlit               # chat UI
+
+# --- Optional but recommended for production quality ---
+sentence-transformers   # higher-quality dense embeddings (downloads a model on first use)
+faiss-cpu               # fast vector index at scale (falls back to NumPy if absent)
+anthropic                # Claude-powered generation (falls back to extractive mode if absent/no API key)
+
+# --- Testing ---
+pytest
